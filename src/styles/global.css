@@ -1,0 +1,65 @@
+main {
+  margin: auto;
+  padding: 1rem;
+  width: 60%;
+  padding: 20px;
+  max-width: calc(100% - 2rem);
+  color: white;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.shadows-into-light-regular {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  border: 0;
+  margin-top: 0;
+}
+
+.logo {
+  width: 150px;
+  /*filter: blur(1px);*/
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  background: #13151a;
+  background-size: 224px;
+  color-scheme: dark;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 0;
+  font-family: "Shadows Into Light";
+}
+
+code {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.glow {
+  color: #fff;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #dc262b,
+      0 0 40px #dc262b, 0 0 50px #dc262b, 0 0 60px #dc262b, 0 0 70px #dc262b;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ed3237, 0 0 40px #ed3237,
+      0 0 50px #ed3237, 0 0 60px #ed3237, 0 0 70px #ed3237, 0 0 80px #ed3237;
+  }
+}

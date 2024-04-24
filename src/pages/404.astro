@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BigHeader from "../components/BigHeader.astro";
+import "../styles/global.css";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="404 - Not Found">
+  <main>
+    <BigHeader />
+    <section class="notfound">
+      <div class="div">
+        <h1>ESTA PAGINA NO EXISTE</h1>
+        <p>
+          Parece que intentas acceder a un sitio inexistente, da la vuelta y
+          asegurate de escribir bien la direccion.
+        </p>
+        <img
+          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3loZmV0MzF6MThzbGsyd2dxeHdxNm5oc2Jwa3c0MjhzbW91N2c5aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UHAYP0FxJOmFBuOiC2/giphy.gif"
+        />
+      </div>
+      <div class="volver">
+        <Card
+          title="Volver"
+          body="Presiona para volver a la pagina principal"
+          href="/"
+        />
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .notfound {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .notfound img {
+    transition: transform 0.3s ease-out;
+    width: 250px;
+    padding: 30px;
+  }
+
+  .notfound img:hover {
+    transform: scale(1.05);
+  }
+</style>

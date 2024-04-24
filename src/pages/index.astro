@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import BigHeader from "../components/BigHeader.astro";
+---
+
+<Layout title="TheSamurayJack">
+  <BigHeader />
+  <main>
+    <p class="introduction">
+      <strong>Bienvenido!!</strong><br />
+      Te invito a explorar las siguientes secciones del sitio...
+    </p>
+    <section class="card-grid">
+      <Card
+        title="Blog"
+        body="Lee un poco de mi constante progreso en el mundo del desarrollo."
+        href="/blog"
+      />
+      <Card
+        title="Sobre Mi"
+        body="¿TheSamurayJack? ¿De donde salio la idea? ¿Quien soy y que es lo que hago?"
+        href="/about"
+      />
+      <Card
+        title="PortFolio"
+        body="Entra aqui para conocer mas sobre mis habilidades, los proyectos en los que he trabajado y obten mi contacto."
+        href="/inDev"
+      />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .introduction {
+    text-align: center;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+</style>

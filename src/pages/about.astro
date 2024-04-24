@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+
+const añoNacimiento = 2007;
+let fechaActual = new Date();
+let añoActual = fechaActual.getFullYear();
+
+let edad = añoNacimiento - añoActual;
+---
+
+<Layout title="Sobre Mi - TheSamurayJack">
+  <Header />
+  <main>
+    <h3>TheSamurayJack es...</h3>
+    <div class="images-hero">
+      <img class="identity-image" src="./src/img/logo.png" alt="" />
+      <img class="identity-image" src="./src/img/me.jpg" alt="" />
+    </div>
+    <p>
+      Mi nombre es <strong>Jair Zhindón</strong>, soy programador autodidacta.
+      La tecnologia y el desarrollo me ha atraido desde que era un niño pero no
+      fue hasta que tenia 13 años que empeze a hurgar mas en este mundo. Al
+      principio en cosas sencillas, y poco a poco, aprendiendo y mejorando mas
+      mis hablidades. <br />
+    </p>
+    <p>
+      Actualmente tengo {edad} años de edad, pese a que sigo estudiando en el colegio,
+      por mi cuenta aprendo sobre las tecnologias de desarrollo mas usadas y eh logrado
+      crear algunos proyectos por mi cuenta.
+    </p>
+    <p>
+      Ademas de mis conocimientos sobre tecnologia, tambien soy un amante de la
+      musica, y en mis ratos libre me gusta dedicarme a tocar, componer y
+      producir musica por mi cuenta usando una guitarra, un piano y mi fiel
+      computadora.
+    </p>
+    <p>
+      La idea del nombre <strong>TheSamurayJack</strong> viene de una serie animada.
+      Enrealidad nunca la vi, pero es por esa serie que mi hermano me puso este nombre
+      de usuario en el primer juego en linea que jugue, y a dia de hoy, lo sigo usando.
+    </p>
+    <p>
+      Mi gran aficion es el desarrollo de software, siendo esto mi dedicacion y
+      futuro trabajo. Actualmente me considero un <strong
+        >Desarrollador web Junior</strong
+      > pero con conocimientos suficientes sobre el <strong
+        >Backend y Frontend</strong
+      > pra colaborar en un proyecto real.
+    </p>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .images-hero {
+    position: relative;
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .identity-image {
+    width: 170px;
+    height: 170px;
+    border-radius: 150px;
+  }
+</style>

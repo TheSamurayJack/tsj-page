@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import BlogPost from "../components/BlogPost.astro";
+const allPosts = await Astro.glob("../pages/blog/*.md");
+const titles = [
+  "Bienvenido, ¿que vas a leer?",
+  "El ultimo post parece llamativo",
+  "",
+];
+---
+
+<Layout title="Blog - TheSamurayJack">
+  <Header />
+  <main>
+    <h1 class="glow">Articulos recientes</h1>
+    <section class="blog">
+      <ul>
+        {
+          allPosts.map((post) => (
+            <BlogPost
+              title={post.frontmatter.title}
+              url={post.url}
+              img={post.frontmatter.heroImage}
+              description={post.frontmatter.description}
+              author="TheSamurayJack"
+              date={post.frontmatter.pubDate}
+            />
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  .blog {
+    margin-top: 20px;
+  }
+
+  .blog ul {
+    list-style: none;
+  }
+</style>

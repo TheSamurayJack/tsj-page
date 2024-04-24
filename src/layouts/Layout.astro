@@ -1,0 +1,31 @@
+---
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
+import "../styles/global.css";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <ViewTransitions />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <Footer />
+  </body>
+</html>

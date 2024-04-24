@@ -1,0 +1,41 @@
+<header>
+  <div class="container">
+    <h1 class="glow">TheSamurayJack</h1>
+    <aside>
+      <img class="logo" src="./src/img/logo.png" />
+    </aside>
+  </div>
+  <hr class="line" class="glow" />
+</header>
+
+<style>
+  .line {
+    border: none;
+    height: 6px;
+    background-color: #000;
+    width: 55%;
+    background: #ed213a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #93291e,
+      #ed213a
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #93291e,
+      #ed213a
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    filter: blur(1px);
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .container {
+    display: flex;
+    flex-direction: row;
+  }
+</style>

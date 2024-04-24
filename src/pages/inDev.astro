@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BigHeader from "../components/BigHeader.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="This page is in developing">
+  <BigHeader />
+  <main>
+    <section class="in-dev">
+      <div class="div">
+        <h1>En Desarrollo 👷‍♂️</h1>
+        <p>
+          La seccion del sitio a la que tratas de acceder esta <strong
+            >en desarrollo</strong
+          >. Te avisaremos cuando este lista.
+        </p>
+        <img
+          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWJqbWJtbm1uaXh0bGp6cm1vNXBwaXEwZmp1azJwYXdrNXUwd2R5ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13rQ7rrTrvZXlm/giphy.gif"
+        />
+      </div>
+      <div class="volver">
+        <Card
+          title="Volver"
+          body="Presiona para volver a la pagina principal"
+          href="/"
+        />
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .in-dev {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .in-dev img {
+    transition: transform 0.3s ease-out;
+    width: 250px;
+    padding: 30px;
+  }
+
+  .in-dev img:hover {
+    transform: scale(1.05);
+  }
+</style>

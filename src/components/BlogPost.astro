@@ -1,0 +1,76 @@
+---
+interface Props {
+  title: string;
+  img: string;
+  description: string;
+  author: string;
+  url: string;
+  date: string;
+}
+
+const { title, img, description, author, url, date } = Astro.props;
+---
+
+<li>
+  <article class="post">
+    <div class="container">
+      <header>{date}</header>
+      <a href={url}>
+        <div class="info">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+        <div class="img-container">
+          <img src={img} alt="" />
+        </div>
+      </a>
+    </div>
+  </article>
+</li>
+
+<style>
+  li {
+  }
+
+  .post {
+    background-color: #23262d;
+    margin: 15px;
+    display: block;
+    box-sizing: border-box;
+    padding: 1px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-out;
+  }
+
+  .container {
+    background-color: #23262d;
+    border-radius: 8px;
+    opacity: 0.9;
+    padding: 1rem;
+  }
+
+  a {
+    display: block;
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .post img {
+    max-width: 200px;
+  }
+
+  .post:is(:hover, :focus-within) {
+    transform: scale(1.05);
+    /*background-position: 0;
+    background: -webkit-linear-gradient(to right, #93291e, #ed213a);
+    background: linear-gradient(to right, #93291e, #ed213a);*/
+  }
+  .post:is(:hover, :focus-within) h3 {
+    color: #ed213a;
+  }
+</style>
