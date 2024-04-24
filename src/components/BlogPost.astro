@@ -50,7 +50,6 @@ const { title, img, description, author, url, date } = Astro.props;
   }
 
   a {
-    display: block;
     box-sizing: border-box;
     color: inherit;
     text-decoration: none;
@@ -64,6 +63,10 @@ const { title, img, description, author, url, date } = Astro.props;
     max-width: 200px;
   }
 
+  .post p {
+    font-size: large;
+  }
+
   .post:is(:hover, :focus-within) {
     transform: scale(1.05);
     /*background-position: 0;
@@ -72,5 +75,12 @@ const { title, img, description, author, url, date } = Astro.props;
   }
   .post:is(:hover, :focus-within) h3 {
     color: #ed213a;
+  }
+
+  @media (max-width: 750px) {
+    a {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 </style>

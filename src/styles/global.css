@@ -1,7 +1,7 @@
 main {
   margin: auto;
   padding: 1rem;
-  width: 60%;
+  width: 65%;
   padding: 20px;
   max-width: calc(100% - 2rem);
   color: white;
@@ -9,9 +9,13 @@ main {
   line-height: 1.6;
 }
 
-.shadows-into-light-regular {
+main img {
+  max-width: 80%;
+}
+
+.title-font {
   font-family: "Shadows Into Light", cursive;
-  font-weight: 400;
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -26,14 +30,14 @@ body {
 }
 
 html {
-  font-family: system-ui, sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #13151a;
   background-size: 224px;
   color-scheme: dark;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1;
   text-align: center;
@@ -61,5 +65,18 @@ code {
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #ed3237, 0 0 40px #ed3237,
       0 0 50px #ed3237, 0 0 60px #ed3237, 0 0 70px #ed3237, 0 0 80px #ed3237;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    width: 100%;
+  }
+}
+
+@media (max-widht: 750px) {
+  main {
+    margin: 0;
+    padding: 10px;
   }
 }

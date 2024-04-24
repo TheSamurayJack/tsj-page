@@ -1,0 +1,14 @@
+main pre {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+main img {
+  width: 80%;
+}
+
+main h1,
+h2,
+h3 {
+  font-family: "Shadows Into Light", cursive;
+}
