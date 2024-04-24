@@ -9,10 +9,6 @@ main {
   line-height: 1.6;
 }
 
-main img {
-  max-width: 80%;
-}
-
 .title-font {
   font-family: "Shadows Into Light", cursive;
   font-weight: bold;
