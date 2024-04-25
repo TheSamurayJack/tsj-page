@@ -29,7 +29,8 @@ const { title, img, description, author, url, date } = Astro.props;
 </li>
 
 <style>
-  li {
+  header {
+    color: #a1a1a1;
   }
 
   .post {
@@ -45,7 +46,6 @@ const { title, img, description, author, url, date } = Astro.props;
   .container {
     background-color: #23262d;
     border-radius: 8px;
-    opacity: 0.9;
     padding: 1rem;
   }
 
@@ -61,7 +61,9 @@ const { title, img, description, author, url, date } = Astro.props;
 
   .post img {
     max-width: 200px;
-    margin: 15px;
+    padding: 0;
+    margin: 0 20px;
+    box-sizing: border-box;
   }
 
   .post p {
@@ -69,6 +71,7 @@ const { title, img, description, author, url, date } = Astro.props;
   }
 
   .post:is(:hover, :focus-within) {
+    background-color: #ed213a;
     transform: scale(1.05);
     /*background-position: 0;
     background: -webkit-linear-gradient(to right, #93291e, #ed213a);
